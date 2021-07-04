@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Quiz</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="quizArea">
+  <div class="multipleChoiceQues">
+  <h1 class="mc_quiz">
+    Quiz
+  </h1>
+    <div class="my-progress">
+        <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>    
+        <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
+    </div>
+    <div class="quizBox">
+      <div class="question"> </div>
+      <div class="answerOptions"></div>
+      <div class="buttonArea">
+        <button id="next"  class="hidden">Next</button>
+        <button id="submit"  class="hidden">Submit</button>
+      </div>
+    </div>
+  </div>
+  <div class="resultArea">  
+    <div class="resultPage1">
+      <div class="resultBox">
+        <h1>Result Summary</h1>
+      </div>
+      <div class="briefchart">
+        <svg height="300" width="300" id="_cir_progress">
+          <g>
+            <rect x="0" y="1" width="30" height="15"  fill="#ab4e6b" />
+            <text x="32" y="14" font-size="14"  class="_text_incor">Incorrect : 12 </text>
+          </g>
+          <g>
+            <rect x="160" y="1" width="30" height="15"  fill="#968089" />
+            <text x="192" y="14" font-size="14" class="_text_cor">Correct : 12</text>
+         </g>          
+          <circle class="_cir_P_x" cx="150" cy="150" r="120" stroke="#ab4e6b" stroke-width="20" fill="none" onmouseover="evt.target.setAttribute('stroke', 'rgba(171, 78, 107,0.7)');" onmouseout="evt.target.setAttribute('stroke','#ab4e6b');"></circle>
+
+          <circle class="_cir_P_y" cx="150" cy="150" r="120" stroke="#968089" stroke-width="20"  stroke-dasharray="0,1000" fill="none"  onmouseover="evt.target.setAttribute('stroke', 'rgba(150, 128, 137,0.7)');" onmouseout="evt.target.setAttribute('stroke','#968089');"></circle>
+          <text x="50%" y="50%" text-anchor="middle" stroke="none" stroke-width="1px" dy=".3em" class="_cir_Per">0%</text>
+          </svg>
+      </div>
+
+      <div class="resultBtns">
+        <button class="viewanswer">View Answers</button>
+        <button class="viewchart">View Chart</button>
+        <button class="replay"><i class="fa fa-repeat" style="font-size:1em;"></i> <br/>Replay</button>
+      </div>
+    </div>
+
+    <div class="resultPage2">
+      <h1>Your Result</h1>
+      <div class="chartBox">
+        <canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+      <button class="backBtn">Back</button>
+    </div>
+
+    <div class="resultPage3">
+      <h1>Your Answers</h1>
+      <div class="allAnswerBox">
+        
+      </div>
+      <button class="backBtn">Back</button>
+    </div>
+
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js'></script>
+<script src='https://raw.githubusercontent.com/emn178/Chart.PieceLabel.js/master/src/Chart.PieceLabel.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
