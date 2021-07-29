@@ -51,11 +51,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'teamassess.urls'
+import os
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__)) 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH,'teamassess',  'templates'),
+        os.path.join(SETTINGS_PATH,'teamassess',  'templates'), 'assessment',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,10 +70,10 @@ TEMPLATES = [
             ],
         },
     },
-]
+] 
 
+ 
 WSGI_APPLICATION = 'teamassess.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
