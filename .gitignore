@@ -13,3 +13,5 @@ teamassess/db.sqlite3
 // Database
 *.sqlite3
 
+// Static files
+staticfiles
