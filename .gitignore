@@ -9,7 +9,7 @@ teamassess/db.sqlite3
 
 // .pyc python files.
 /__pycache__/
-
+teamassess/__pycache__
 // Database
 *.sqlite3
 
